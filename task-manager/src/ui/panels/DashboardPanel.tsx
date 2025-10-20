@@ -17,7 +17,7 @@ function DashboardPanel() {
       </div>
       <div className="h-[70%] flex flex-col justify-center items-center gap-6">
         <p style={{ color: colors.text, fontSize: "24px", fontWeight: "bold" }}>
-          Task Status BreakDown
+          Task Status
         </p>
         <div>
           <DonutChart />

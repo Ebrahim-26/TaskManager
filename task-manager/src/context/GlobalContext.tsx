@@ -27,7 +27,7 @@ export const GlobalProvider = ({ children }: { children: ReactNode }) => {
   const [assigneeData, setAssigneeData] =
     useState<StatusCardType[]>(AssigneeData);
   const [typeData, setTypeData] = useState<StatusCardType[]>(TypeData);
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
   const [filterStatus, setFilterStatus] = useState<number>(0);
   const toggleDarkMode = () => {
     setDarkMode((prev) => !prev);
