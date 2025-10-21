@@ -36,7 +36,7 @@ function NewTaskPanel() {
 
   const addNewTask = (e: React.FormEvent) => {
     e.preventDefault();
-    setData((prev:TheDataType[]) => [
+    setData((prev: TheDataType[]) => [
       ...prev,
       {
         id: prev.length + 1,
@@ -110,13 +110,14 @@ function NewTaskPanel() {
           </div>
         </div>
         <button
-          // disabled={!createTask}
+          disabled={!createTask}
           onClick={addNewTask}
           className="rounded-xl h-[3rem] font-bold "
           style={{
             backgroundColor: createTask ? colors.background : "grey",
             color: colors.text,
             cursor: createTask ? "pointer" : "not-allowed",
+            opacity: createTask ? 1 : 0.5,
           }}
         >
           Create New Task
