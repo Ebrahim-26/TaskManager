@@ -20,7 +20,7 @@ export default function BasicModal({
   priority,
   dueDate,
 }: TheDataType) {
-  
+
   const { colors } = useTheme();
 
   const style = {
@@ -28,7 +28,6 @@ export default function BasicModal({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: 600,
     bgcolor: colors.background,
     border: "2px solid #000",
     boxShadow: 24,
@@ -112,7 +111,7 @@ export default function BasicModal({
             placeholder="Description"
             multiline
           />
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <BasicSelect
               title="Status"
               data={StatusData}

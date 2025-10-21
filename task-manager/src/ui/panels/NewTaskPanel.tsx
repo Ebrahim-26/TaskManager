@@ -7,6 +7,7 @@ import { StatusData } from "@/data/mockData";
 import { useGlobalContext } from "@/context/GlobalContext";
 import dayjs, { Dayjs } from "dayjs";
 import { useTheme } from "@/theme/useTheme";
+import { TheDataType } from "@/type/ComponentTypes";
 function NewTaskPanel() {
   const { colors } = useTheme();
   const { setData, assigneeData, typeData, setToastData } = useGlobalContext();
@@ -35,7 +36,7 @@ function NewTaskPanel() {
 
   const addNewTask = (e: React.FormEvent) => {
     e.preventDefault();
-    setData((prev) => [
+    setData((prev:TheDataType[]) => [
       ...prev,
       {
         id: prev.length + 1,
@@ -60,7 +61,7 @@ function NewTaskPanel() {
   return (
     <div
       style={{ backgroundColor: colors.panel }}
-      className="rounded-3xl p-5 flex flex-col overflow-y-auto scrollbar-hide w-[30%]"
+      className="rounded-3xl p-5 flex flex-col overflow-y-auto scrollbar-hide w-full sm:w-[30%]"
     >
       <form className="flex flex-col justify-between h-full w-[100%]">
         <div className="flex flex-col gap-5">
@@ -109,11 +110,11 @@ function NewTaskPanel() {
           </div>
         </div>
         <button
-          disabled={!createTask}
+          // disabled={!createTask}
           onClick={addNewTask}
           className="rounded-xl h-[3rem] font-bold "
           style={{
-            backgroundColor: createTask ? colors.buttonBg : "grey",
+            backgroundColor: createTask ? colors.background : "grey",
             color: colors.text,
             cursor: createTask ? "pointer" : "not-allowed",
           }}
