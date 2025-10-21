@@ -56,7 +56,8 @@ function NewTaskPanel() {
     setType("");
     setDueDate(dayjs());
     setPriority(1);
-    setToastData({ message: "Task Created Successfullt", color: "green" });
+    setToastData({ message: `Created: ${title}`, color: "green" });
+
   };
   return (
     <div

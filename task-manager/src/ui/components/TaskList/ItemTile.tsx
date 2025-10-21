@@ -30,7 +30,7 @@ function ItemTile({ id }: TheDataType) {
   const { color, symbol } = findPriority(object?.priority || 1);
   const deleteTask = () => {
     setData((prev) => prev.filter((item) => item.id != id));
-    setToastData({ message: "Deleted", color: "red" });
+    setToastData({ message: `Deleted: ${object?.title}`, color: "red" });
   };
 
   return (
@@ -40,8 +40,8 @@ function ItemTile({ id }: TheDataType) {
           object?.status === 1
             ? "red"
             : object?.status === 2
-            ? "yellow"
-            : "green",
+              ? "yellow"
+              : "green",
         borderRightWidth: "6px",
         borderStyle: "solid",
         backgroundColor: colors.taskItem,
