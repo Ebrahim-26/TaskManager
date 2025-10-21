@@ -1,13 +1,15 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import { DiscreteSliderType } from "@/type/ComponentTypes";
+import { DiscreteSliderType, StatusCardType } from "@/type/ComponentTypes";
 import { useTheme } from "@/theme/useTheme";
-const data = [
-  { value: 1, label: "Low Priority" },
-  { value: 2, label: "Medium Priority" },
-  { value: 3, label: "High Priority" },
-];
+import { priorityData } from "@/data/mockData";
+
+const formatData = (data: StatusCardType[]) =>
+  data.map((item) => ({
+    value: item.id,
+    label: item.name,
+  }));
 
 export default function DiscreteSlider({
   value,
@@ -21,7 +23,7 @@ export default function DiscreteSlider({
         value={value}
         onChange={(_, newValue) => setValue(newValue as number)}
         step={1}
-        marks={data}
+        marks={formatData(priorityData)}
         min={1}
         max={3}
         valueLabelDisplay="auto"

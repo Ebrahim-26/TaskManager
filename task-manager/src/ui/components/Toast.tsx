@@ -12,7 +12,7 @@ function Toast() {
     return () => {
       clearTimeout(timer);
     };
-  }, [toastData]);
+  }, [toastData, setToastData]);
 
   if (!toastData) {
     return <></>;

@@ -45,3 +45,18 @@ export type toastType = {
   message: string;
   color: "red" | "blue" | "green";
 };
+
+export type ModalType = {
+  passedData: StatusCardType[];
+  setPassedData: React.Dispatch<React.SetStateAction<StatusCardType[]>>;
+  title: string;
+  TriggerIcon: React.ElementType;
+  iconSize: number;
+};
+
+export type BasicSelectType = {
+  title: string;
+  data: StatusCardType[];
+  value: number | "";
+  setValue: React.Dispatch<React.SetStateAction<number | "">>;
+};

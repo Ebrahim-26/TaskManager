@@ -4,15 +4,8 @@ import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { TextField, Tooltip } from "@mui/material";
 import { useTheme } from "@/theme/useTheme";
-import { StatusCardType } from "@/type/ComponentTypes";
 import { useGlobalContext } from "@/context/GlobalContext";
-type ModalType = {
-  passedData: StatusCardType[];
-  setPassedData: React.Dispatch<React.SetStateAction<StatusCardType[]>>;
-  title: string;
-  TriggerIcon: React.ElementType;
-  iconSize: number;
-};
+import { ModalType } from "@/type/ComponentTypes";
 
 export default function DockModal({
   passedData,

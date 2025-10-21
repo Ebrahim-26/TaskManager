@@ -5,17 +5,9 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useTheme } from "@/theme/useTheme";
-type BasicSelectType = {
-  title: string;
-  data: dataType[];
-  value: number | "";
-  setValue: React.Dispatch<React.SetStateAction<number | "">>;
-};
+import { BasicSelectType } from "@/type/ComponentTypes";
 
-type dataType = {
-  id: number;
-  name: string;
-};
+
 export default function BasicSelect({
   title,
   data,
