@@ -36,7 +36,7 @@ function Toast() {
   };
   return (
     <div
-      className="z-[100] sm:h-8 h-10 items-center  justify-center inline-flex  rounded-md fixed bottom-10 left-10 right-10 sm:right-auto"
+      className="z-[100] sm:h-8 h-10 items-center  justify-center inline-flex  rounded-md fixed bottom-2 sm:bottom-10 left-10 right-10 sm:right-auto"
       style={{ backgroundColor: toastColor() }}
     >
       <p className="text-white w-full text-center p-4">{toastData?.message}</p>
