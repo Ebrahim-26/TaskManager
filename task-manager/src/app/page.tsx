@@ -17,9 +17,9 @@ function Page() {
       >
         <div
           style={{ backgroundColor: colors.panel }}
-          className=" rounded-3xl p-5 flex flex-col overflow-y-auto scrollbar-hide w-full sm:w-[70%] justify-between"
+          className=" rounded-3xl p-5 flex flex-col overflow-y-auto scrollbar-hide w-full sm:w-[70%] justify-between gap-4"
         >
-          <div className="flex flex-col sm:flex-row gap-15 sm:gap-5 justify-between h-[80vh]">
+          <div className="flex flex-col sm:flex-row gap-15 sm:gap-5 justify-between h-[100vh] sm:h-[80vh]">
             <DashboardPanel />
             <div className="hidden h-full sm:flex items-center justify-center">
               <div className="h-[95%] border-1 border-white/40"></div>

@@ -9,8 +9,8 @@ export const TypeData = [
   { id: 2, name: "Feature" },
 ];
 export const AssigneeData = [
-  { id: 1, name: "Jon" },
-  { id: 2, name: "Farhan" },
+  { id: 1, name: "Louis" },
+  { id: 2, name: "Jeffrey" },
 ];
 
 export const priorityData = [
