@@ -22,7 +22,7 @@ function Dock() {
     setTypeData,
   } = useGlobalContext();
   return (
-    <div className="w-[100%] flex justify-center">
+    <div className="w-[100%] flex justify-center absolute bottom-4">
       <div
         style={{ backgroundColor: colors.field }}
         className="flex justify-center rounded-full h-[3rem] px-[2rem] items-center"

@@ -19,7 +19,7 @@ function TaskListPanel() {
         item.title.toLowerCase().includes(search.toLowerCase())
       );
   return (
-    <div className="w-full overflow-y-auto">
+    <div className="w-full overflow-y-auto pb-15">
       <div className="flex flex-col gap-5">
         <CustomTextField
           data={search}
